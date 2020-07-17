@@ -17,6 +17,7 @@ public class Admin_dashboard extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -36,7 +37,7 @@ public class Admin_dashboard extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 130, -1));
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 130, -1));
 
         jButton4.setText("Delete Record");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -44,7 +45,7 @@ public class Admin_dashboard extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 130, -1));
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, 130, -1));
 
         jButton7.setText("Return to menu");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -52,7 +53,7 @@ public class Admin_dashboard extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, 130, -1));
+        jPanel2.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 130, -1));
 
         jButton8.setText("Search for record");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -60,7 +61,7 @@ public class Admin_dashboard extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 130, -1));
+        jPanel2.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 130, -1));
 
         jButton5.setText("Add Parent/Pupil");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -68,7 +69,15 @@ public class Admin_dashboard extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 130, -1));
+        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 130, -1));
+
+        jButton1.setText("View subjects");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 130, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background4.jpg"))); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(500, 900));
@@ -113,7 +122,13 @@ public class Admin_dashboard extends javax.swing.JFrame {
         new Admin_addRecord().setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        super.dispose();
+        new Admin_subjects().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;

@@ -34,6 +34,8 @@ public class Admin_login extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Username:");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
+
+        tUsername.setToolTipText("root");
         jPanel2.add(tUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 130, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
@@ -61,6 +63,8 @@ public class Admin_login extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 80, -1));
+
+        tPassword.setToolTipText("root");
         jPanel2.add(tPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 130, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background1.jpg"))); // NOI18N

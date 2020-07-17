@@ -44,6 +44,13 @@ public class Parent_login extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Username:");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
+
+        tUsername.setToolTipText("Json");
+        tUsername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tUsernameActionPerformed(evt);
+            }
+        });
         jPanel2.add(tUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 130, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
@@ -80,6 +87,7 @@ public class Parent_login extends javax.swing.JFrame {
         });
         jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, 140, -1));
 
+        tPassword.setToolTipText("123");
         tPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tPasswordActionPerformed(evt);
@@ -167,6 +175,10 @@ public class Parent_login extends javax.swing.JFrame {
     private void tPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tPasswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tPasswordActionPerformed
+
+    private void tUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tUsernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tUsernameActionPerformed
 
     private void saveParent(int ID, String Name, String Sname, String Uname,
             String pswd, String Contact, String Address) {

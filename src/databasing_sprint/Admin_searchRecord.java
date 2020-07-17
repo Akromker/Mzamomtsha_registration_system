@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Alex
  */
-public class Admin_searchRecord extends javax.swing.JFrame {
+public final class Admin_searchRecord extends javax.swing.JFrame {
 
     public Admin_searchRecord() {
         initComponents();
