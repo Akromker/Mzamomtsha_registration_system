@@ -31,7 +31,7 @@ CREATE TABLE `parents` (
   `Contact` varchar(13) NOT NULL,
   `Address` varchar(45) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `parents` (
 
 LOCK TABLES `parents` WRITE;
 /*!40000 ALTER TABLE `parents` DISABLE KEYS */;
-INSERT INTO `parents` VALUES (2,'Jason','McCaw','Json','123','1234567845','16 Libertas Avenue Goodwood'),(3,'Christopher','Eaby','ChrisEaby','123','0694202121','125 Townsend str Goodwood'),(4,'Dewald','Coetzee','DCoetzee','123','0796531564','16 Mein Kampf drive Germany'),(5,'Juanita','Kromker','jKromker','123','0641234568','124 General van Wyk street plattekloof'),(6,'Juanita','Kromker','JKromker','123','0716235468','15 Jenhoff street Monte Vista'),(7,'Alex','Kromker','Akromker','123','079 671 2564','12 juwdem street Goodwood estate');
+INSERT INTO `parents` VALUES (2,'Jason','McCaw','Json','123','1234567845','16 Libertas Avenue Goodwood'),(3,'Christopher','Eaby','ChrisEaby','123','0694202121','125 Townsend str Goodwood'),(4,'Dewald','Coetzee','DCoetzee','123','0796531564','16 Mein Kampf drive Germany'),(5,'Juanita','Kromker','jKromker','123','0641234568','124 General van Wyk street plattekloof'),(6,'Juanita','Kromker','JKromker','123','0716235468','15 Jenhoff street Monte Vista'),(7,'Alex','Kromker','Akromker','123','079 671 2564','12 juwdem street Goodwood estate'),(8,'Keoikantse','Botlholo','KBotlholo','123','089 652 1234','12 park street Bothasig ');
 /*!40000 ALTER TABLE `parents` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-07-10 14:51:59
+-- Dump completed on 2020-07-24 13:19:13

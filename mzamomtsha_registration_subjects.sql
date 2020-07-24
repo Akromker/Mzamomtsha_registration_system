@@ -16,32 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `staff`
+-- Table structure for table `subjects`
 --
 
-DROP TABLE IF EXISTS `staff`;
+DROP TABLE IF EXISTS `subjects`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `staff` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(25) NOT NULL,
-  `Surname` varchar(25) NOT NULL,
-  `Subject` varchar(25) NOT NULL,
-  `Grade` int NOT NULL,
-  `Username` varchar(45) NOT NULL,
-  `Password` varchar(45) NOT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `subjects` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `Subject` varchar(45) DEFAULT NULL,
+  `Phase` varchar(45) DEFAULT NULL,
+  `Students_enrolled` int DEFAULT NULL,
+  `Students_rejected` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `staff`
+-- Dumping data for table `subjects`
 --
 
-LOCK TABLES `staff` WRITE;
-/*!40000 ALTER TABLE `staff` DISABLE KEYS */;
-INSERT INTO `staff` VALUES (1,'Jenny','Coleman','Maths',6,'JColeman','123'),(2,'Keoikantse','botlholo','IT',7,'Kbotlholo','123');
-/*!40000 ALTER TABLE `staff` ENABLE KEYS */;
+LOCK TABLES `subjects` WRITE;
+/*!40000 ALTER TABLE `subjects` DISABLE KEYS */;
+INSERT INTO `subjects` VALUES (1,'English','6-9',28,0),(2,'English','10-14',28,0),(3,'English','15-17',26,2),(4,'Afrikaans','6-9',28,0),(5,'Afrikaans','10-14',28,0),(6,'Afrikaans','15-17',26,2),(7,'Mathematics','6-9',12,0),(8,'Mathematics','10-14',11,1),(9,'Mathematics','15-17',8,3),(10,'Maths Literacy','6-9',16,0),(11,'Maths Literacy','10-14',18,0),(12,'Maths Literacy','15-17',21,0),(13,'Life Skills','6-9',28,0),(14,'Life Skills','10-14',28,0),(15,'Life Skills','15-17',28,0),(16,'Creative Art','6-9',15,0),(17,'Creative Art','10-14',15,0),(18,'Creative Art','15-17',10,5),(19,'IT','6-9',13,0),(20,'IT','10-14',13,0),(21,'IT','15-17',13,0);
+/*!40000 ALTER TABLE `subjects` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
