@@ -43,21 +43,18 @@ public class Admin_addStaff extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Name:");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
-        jPanel2.add(tName, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 130, 30));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
+        jPanel2.add(tName, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 130, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Add new staff member");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Surname:");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
-        jPanel2.add(tSname, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 130, 30));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
+        jPanel2.add(tSname, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 130, 30));
 
         jButton1.setText("Add record");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -77,31 +74,27 @@ public class Admin_addStaff extends javax.swing.JFrame {
         jPanel2.add(tSubject, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 130, 30));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Subject:");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 160, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Username:");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, -1, -1));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Password:");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, -1, -1));
-        jPanel2.add(tUname, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, 130, 30));
-        jPanel2.add(tPSWD, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 200, 130, 30));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, -1, -1));
+        jPanel2.add(tUname, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, 130, 30));
+        jPanel2.add(tPSWD, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 190, 130, 30));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Grade:");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, -1, -1));
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, -1, -1));
 
         jSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 7, 1));
         jPanel2.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 250, 50, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background2.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Background6.jpg"))); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(500, 900));
         jLabel1.setMinimumSize(new java.awt.Dimension(50, 900));
         jLabel1.setPreferredSize(new java.awt.Dimension(500, 900));

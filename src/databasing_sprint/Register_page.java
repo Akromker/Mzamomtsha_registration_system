@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,6 +16,8 @@ import javax.swing.JOptionPane;
  */
 public class Register_page extends javax.swing.JFrame {
 
+    private File ID;
+    
     public Register_page() throws IOException {
         initComponents();
     }
@@ -108,7 +111,7 @@ public class Register_page extends javax.swing.JFrame {
         jPanel2.add(tUname, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, 130, 30));
         jPanel2.add(tPSWD, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 200, 130, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background2.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/BlackBoard.jpg"))); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(500, 900));
         jLabel1.setMinimumSize(new java.awt.Dimension(50, 900));
         jLabel1.setPreferredSize(new java.awt.Dimension(500, 900));
@@ -131,7 +134,8 @@ public class Register_page extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Database_work dbBrain = new Database_work();
-        String qry, name, surname, Uname, Pswd, contactNum, address;
+        String qry, name, surname, Uname, Pswd, contactNum,
+                address, IDdoc;
 
         name = tName.getText();
         surname = tSname.getText();
@@ -139,6 +143,9 @@ public class Register_page extends javax.swing.JFrame {
         Pswd = tPSWD.getText();
         contactNum = tNum.getText();
         address = tAddress.getText();
+        
+        //Add these to database
+        IDdoc = ID.getAbsolutePath();
 
         if (noNullValues()) {
             try {

@@ -80,11 +80,11 @@ public class Staff_login extends javax.swing.JFrame {
         tPassword.setToolTipText("123");
         jPanel2.add(tPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 130, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background1.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Darth-Prof.jpg"))); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(500, 900));
         jLabel1.setMinimumSize(new java.awt.Dimension(50, 900));
         jLabel1.setPreferredSize(new java.awt.Dimension(500, 900));
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-420, -40, 790, 440));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 380));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

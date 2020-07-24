@@ -98,7 +98,7 @@ public class Admin_deleteRecord extends javax.swing.JFrame {
         });
         jPanel2.add(rbStudent, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background2.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Background4.jpg"))); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(500, 900));
         jLabel1.setMinimumSize(new java.awt.Dimension(50, 900));
         jLabel1.setPreferredSize(new java.awt.Dimension(500, 900));

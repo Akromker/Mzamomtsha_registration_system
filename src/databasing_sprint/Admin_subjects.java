@@ -71,7 +71,7 @@ public final class Admin_subjects extends javax.swing.JFrame {
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 150, -1));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background2.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Background4.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 300));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -119,7 +119,10 @@ public final class Admin_subjects extends javax.swing.JFrame {
                 row[3] = rs.getString("Students_enrolled");
                 row[4] = rs.getString("Students_rejected");
                 model.addRow(row);
-            }         
+            }   
+            stmt.close();
+            rs.close();
+            con.close();
             
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Failed to retrieve data from database");

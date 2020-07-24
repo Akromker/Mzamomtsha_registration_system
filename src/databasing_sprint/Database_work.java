@@ -38,18 +38,22 @@ public class Database_work {
         }
     }
 
-    public String getjdbcDriver(){
+    public String getjdbcDriver() {
         return JDBC_Driver;
     }
-    public String getDBurl(){
+
+    public String getDBurl() {
         return DB_url;
     }
-    public String getUsername(){
+
+    public String getUsername() {
         return userName;
     }
-    public String getPassword(){
+
+    public String getPassword() {
         return pswd;
     }
+
     public void closeConnection() throws SQLException {
         try {
             con.close();
@@ -89,26 +93,26 @@ public class Database_work {
         return false;
     }
 
-    public boolean checkParentIDexists(int ID){
-        String qry = "SELECT ID FROM mzamomtsha_registration.parents " +
-                    " WHERE ID = " + ID;
-        try{
+    public boolean checkParentIDexists(int ID) {
+        String qry = "SELECT ID FROM mzamomtsha_registration.parents "
+                + " WHERE ID = " + ID;
+        try {
             Statement stmt = con.createStatement();
             stmt.executeQuery(qry);
-        }catch(SQLException e){
+        } catch (SQLException e) {
             return false;
-        }        
+        }
         return true;
     }
-    
+
     public void executeUpdateQuery(String qry) throws ClassNotFoundException {
         Statement stmt;
         try {
             stmt = con.createStatement();
             stmt.executeUpdate(qry);
             stmt.close();
-            
-            JOptionPane.showMessageDialog(null,"Successfully updated database");
+
+            JOptionPane.showMessageDialog(null, "Successfully updated database");
         } catch (SQLException ex) {
             Logger.getLogger(Database_work.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -182,45 +186,4 @@ public class Database_work {
         return searchResults;
     }
 
-    public List getStudentRecord(String hint) {
-        Statement stmt;
-        String qry, name, Sname, parentName, ID, resultAddition;
-        List<String> searchResults = new ArrayList<>();
-
-        try {
-            //register jdbc driver
-            qry = "Select * FROM students";
-            Class.forName("com.mysql.jdbc.Driver");
-
-            con = DriverManager.getConnection(DB_url, userName, pswd);
-
-            stmt = con.createStatement();
-            ResultSet results = stmt.executeQuery(qry);
-
-            while (results.next()) {
-                ID = String.valueOf(results.getInt("ID"));
-                name = results.getString("Name");
-                Sname = results.getString("Sname");
-                parentName = results.getString("parentName");
-
-                if (((ID).equals(hint)) || (name.equals(hint)) || (Sname.equals(hint))
-                        || (parentName.equals(hint))) {
-
-                    resultAddition = "ID: " + ID + ", "
-                            + "Name: " + name + ", "
-                            + "Surname: " + Sname + ", "
-                            + "Parent name: " + parentName + "\n";
-                    searchResults.add(resultAddition);
-                }
-            }
-            stmt.close();
-            results.close();
-        } catch (SQLException se) {
-            JOptionPane.showMessageDialog(null, "Failed to execute query");
-
-        } catch (ClassNotFoundException ex) {
-            JOptionPane.showMessageDialog(null, "Failed to execute query");
-        }
-        return searchResults;
-    }
 }

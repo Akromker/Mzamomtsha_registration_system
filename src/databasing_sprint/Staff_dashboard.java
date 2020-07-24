@@ -37,9 +37,9 @@ public class Staff_dashboard extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
-        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,12 +47,10 @@ public class Staff_dashboard extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Your dashboard:");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 210, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Parents:");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
@@ -81,7 +79,7 @@ public class Staff_dashboard extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 370, 100));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 370, 120));
 
         jButton1.setText("Log out");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -89,21 +87,25 @@ public class Staff_dashboard extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, 150, -1));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 150, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setText("Pupils:");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "ID", "Name", "Surname", "Grade", "ParentID"
+                "ID", "Name", "Surname", "Grade", "Gender", "ParentID"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -116,14 +118,9 @@ public class Staff_dashboard extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 370, 100));
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 370, 120));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Pupils:");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background6.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Background6.jpg"))); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(500, 900));
         jLabel1.setMinimumSize(new java.awt.Dimension(50, 900));
         jLabel1.setPreferredSize(new java.awt.Dimension(500, 900));
@@ -149,7 +146,7 @@ public class Staff_dashboard extends javax.swing.JFrame {
         //can only be accessed while that parent is signed in.
         clearStaffInfo();
         super.dispose();
-        new Staff_login().setVisible(true);        
+        new Staff_login().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
     public void clearStaffInfo() {
         try {
@@ -167,7 +164,7 @@ public class Staff_dashboard extends javax.swing.JFrame {
         Statement stmt;
         Database_work dbBrain = new Database_work();
         int id;
-        
+
         try {
             String myQuery = "Select * from mzamomtsha_registration.parents";
 
@@ -192,14 +189,15 @@ public class Staff_dashboard extends javax.swing.JFrame {
             Logger.getLogger(Parent_dashboard.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
     public void showPupils() {
         Connection con;
         Statement stmt;
         Database_work dbBrain = new Database_work();
         int id;
-        
+
         try {
-            String myQuery = "Select * from mzamomtsha_registration.learner_details";
+            String myQuery = "Select * FROM mzamomtsha_registration.learner_details";
 
             Class.forName(dbBrain.getjdbcDriver());
             con = DriverManager.getConnection(dbBrain.getDBurl(), dbBrain.getUsername(), dbBrain.getPassword());
@@ -208,13 +206,14 @@ public class Staff_dashboard extends javax.swing.JFrame {
             ResultSet rs = stmt.executeQuery(myQuery);
 
             DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
-            Object[] row = new Object[5];
+            Object[] row = new Object[6];
             while (rs.next()) {
                 row[0] = rs.getInt("ID");
                 row[1] = rs.getString("Name");
                 row[2] = rs.getString("Surname");
                 row[3] = rs.getInt("Grade");
-                row[4] = rs.getInt("Parent_ID");
+                row[4] = rs.getString("Gender");
+                row[5] = rs.getInt("Parent_ID");
                 model.addRow(row);
             }
 

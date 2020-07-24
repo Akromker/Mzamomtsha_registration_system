@@ -101,14 +101,14 @@ public final class Admin_searchRecord extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Name", "Surname", "Grade", "ParentID"
+                "ID", "Name", "Surname", "Grade", "Gender", "ParentID"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -165,14 +165,14 @@ public final class Admin_searchRecord extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Name", "Surname", "Subject", "Grade", "Username", "Password"
+                "ID", "Name", "Surname", "Username", "Password"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
+                false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -192,7 +192,7 @@ public final class Admin_searchRecord extends javax.swing.JFrame {
         jLabel7.setText("Admins:");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Background2.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/BlackBoard.jpg"))); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(500, 900));
         jLabel1.setMinimumSize(new java.awt.Dimension(50, 900));
         jLabel1.setPreferredSize(new java.awt.Dimension(500, 900));
@@ -255,7 +255,7 @@ public final class Admin_searchRecord extends javax.swing.JFrame {
         int id;
         
         try {
-            String myQuery = "Select * from mzamomtsha_registration.learner_details";
+            String myQuery = "Select * FROM mzamomtsha_registration.learner_details";
 
             Class.forName(dbBrain.getjdbcDriver());
             con = DriverManager.getConnection(dbBrain.getDBurl(), dbBrain.getUsername(), dbBrain.getPassword());
@@ -264,13 +264,14 @@ public final class Admin_searchRecord extends javax.swing.JFrame {
             ResultSet rs = stmt.executeQuery(myQuery);
 
             DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
-            Object[] row = new Object[5];
+            Object[] row = new Object[6];
             while (rs.next()) {
                 row[0] = rs.getInt("ID");
                 row[1] = rs.getString("Name");
                 row[2] = rs.getString("Surname");
                 row[3] = rs.getInt("Grade");
-                row[4] = rs.getInt("Parent_ID");
+                row[4] = rs.getString("Gender");
+                row[5] = rs.getInt("Parent_ID");
                 model.addRow(row);
             }
 
