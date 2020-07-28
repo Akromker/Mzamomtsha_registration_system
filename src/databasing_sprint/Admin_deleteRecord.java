@@ -1,7 +1,10 @@
 package databasing_sprint;
 
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -121,30 +124,24 @@ public class Admin_deleteRecord extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         int ID = Integer.parseInt(jTextField1.getText());
-        Database_work dbBrain = new Database_work();
-        if (rbParent.isSelected()) {
-            try {
-                dbBrain.deleteRecord("parent", ID);
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(Admin_deleteRecord.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
+        Database_Brain dbBrain = new Database_Brain();
+        Statement stmt;
+        String qry;
+        String table = getTable();
+        int dbID;
 
-        if (rbStudent.isSelected()) {
-            try {
-                dbBrain.deleteRecord("students", ID);
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(Admin_deleteRecord.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        try {
+            qry = "DELETE FROM mzamomtsha_registration." + table + " WHERE ID = " + ID;
+
+            dbBrain.executeUpdateQuery(qry);
+            dbBrain.closeConnection();
+
+        } catch (SQLException se) {
+            JOptionPane.showMessageDialog(null, "Failed to delete record or connect to database");
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Admin_deleteRecord.class.getName()).log(Level.SEVERE, null, ex);
         }
-        if (rbStaff.isSelected()) {
-            try {
-                dbBrain.deleteRecord("staff", ID);
-            } catch (ClassNotFoundException ex) {
-                Logger.getLogger(Admin_deleteRecord.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-        
+        jTextField1.setText("");
 
     }//GEN-LAST:event_jButton1ActionPerformed
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -161,7 +158,17 @@ public class Admin_deleteRecord extends javax.swing.JFrame {
     private void rbStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbStudentActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rbStudentActionPerformed
-
+    public String getTable(){
+        String table;
+        if (rbParent.isSelected()) {
+            table = "parents";
+        } else if (rbStaff.isSelected()) {
+            table = "staff";
+        }else{
+            table = "learner_details";
+        }
+        return table;
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;

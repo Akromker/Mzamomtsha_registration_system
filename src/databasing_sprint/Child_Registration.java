@@ -187,7 +187,7 @@ public class Child_Registration extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         String qry;
-        Database_work dbBrain = new Database_work();
+        Database_Brain dbBrain = new Database_Brain();
 
         JFileChooser chooser = new JFileChooser();
         chooser.showOpenDialog(null);
@@ -198,7 +198,7 @@ public class Child_Registration extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         String qry;
-        Database_work dbBrain = new Database_work();
+        Database_Brain dbBrain = new Database_Brain();
 
         JFileChooser chooser = new JFileChooser();
         chooser.showOpenDialog(null);
@@ -211,7 +211,7 @@ public class Child_Registration extends javax.swing.JFrame {
         String Name, Surname, Gender, textFileInfo;
         String[] parentInfo;
         int Grade, Parent_ID = 0;
-        Database_work dbBrain = new Database_work();
+        Database_Brain dbBrain = new Database_Brain();
 
         if (CheckNull()) {
             //Getting parent ID;
@@ -264,7 +264,7 @@ public class Child_Registration extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         String qry;
-        Database_work dbBrain = new Database_work();
+        Database_Brain dbBrain = new Database_Brain();
 
         JFileChooser chooser = new JFileChooser();
         chooser.showOpenDialog(null);

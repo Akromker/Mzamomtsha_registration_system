@@ -1,6 +1,5 @@
 package databasing_sprint;
 
-import static databasing_sprint.Database_work.DB_url;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -145,7 +144,7 @@ public class Parent_dashboard extends javax.swing.JFrame {
     public void showParent() {
         Connection con;
         Statement stmt;
-        Database_work dbBrain= new Database_work();
+        Database_Brain dbBrain= new Database_Brain();
         int id;
         
         try {

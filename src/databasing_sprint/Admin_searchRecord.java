@@ -1,6 +1,6 @@
 package databasing_sprint;
 
-import static databasing_sprint.Database_work.DB_url;
+import static databasing_sprint.Database_Brain.DB_url;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -220,7 +220,7 @@ public final class Admin_searchRecord extends javax.swing.JFrame {
     public void showParents() {
         Connection con;
         Statement stmt;
-        Database_work dbBrain= new Database_work();
+        Database_Brain dbBrain= new Database_Brain();
         
         int id;
         try {
@@ -251,7 +251,7 @@ public final class Admin_searchRecord extends javax.swing.JFrame {
     public void showPupils() {
         Connection con;
         Statement stmt;
-        Database_work dbBrain= new Database_work();
+        Database_Brain dbBrain= new Database_Brain();
         int id;
         
         try {
@@ -283,7 +283,7 @@ public final class Admin_searchRecord extends javax.swing.JFrame {
     public void showStaff(){
         Connection con;
         Statement stmt;
-        Database_work dbBrain= new Database_work();
+        Database_Brain dbBrain= new Database_Brain();
         int id;
         
         try {
@@ -315,7 +315,7 @@ public final class Admin_searchRecord extends javax.swing.JFrame {
     public void showAdmins(){
         Connection con;
         Statement stmt;
-        Database_work dbBrain= new Database_work();
+        Database_Brain dbBrain= new Database_Brain();
         int id;
         
         try {

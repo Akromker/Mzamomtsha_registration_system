@@ -117,7 +117,7 @@ public class Admin_addStaff extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //initialize all variables
-        Database_work dbBrain = new Database_work();
+        Database_Brain dbBrain = new Database_Brain();
         String name, surname, subject, Uname, Pswd;
         int grade;
 

@@ -244,7 +244,7 @@ public class Admin_addRecord extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //initialize all variables
-        Database_work dbBrain = new Database_work();
+        Database_Brain dbBrain = new Database_Brain();
         String name, surname, contactNum, address,
                 Uname, Pswd, Gender;
         int grade, parentID;
@@ -275,8 +275,9 @@ public class Admin_addRecord extends javax.swing.JFrame {
                             + Pswd + "', '" + contactNum + "', '" + address + "')";
 
                     dbBrain.executeUpdateQuery(qry);
-                    clearTextFields();
                     dbBrain.closeConnection();
+                    
+                    clearTextFields();                    
                 } catch (ClassNotFoundException e) {
                     JOptionPane.showMessageDialog(null, "Cannot find addRecord function");
                 } catch (SQLException ex) {

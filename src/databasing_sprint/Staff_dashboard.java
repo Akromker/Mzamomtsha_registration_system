@@ -1,8 +1,6 @@
 package databasing_sprint;
 
-import static databasing_sprint.Database_work.DB_url;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Connection;
@@ -162,7 +160,7 @@ public class Staff_dashboard extends javax.swing.JFrame {
     public void showParents() {
         Connection con;
         Statement stmt;
-        Database_work dbBrain = new Database_work();
+        Database_Brain dbBrain = new Database_Brain();
         int id;
 
         try {
@@ -193,7 +191,7 @@ public class Staff_dashboard extends javax.swing.JFrame {
     public void showPupils() {
         Connection con;
         Statement stmt;
-        Database_work dbBrain = new Database_work();
+        Database_Brain dbBrain = new Database_Brain();
         int id;
 
         try {

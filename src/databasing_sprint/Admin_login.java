@@ -92,7 +92,7 @@ public class Admin_login extends javax.swing.JFrame {
         //Get login username and password
         String Uname = tUsername.getText();
         String pswd = tPassword.getText();
-        Database_work dbBrain = new Database_work();
+        Database_Brain dbBrain = new Database_Brain();
         
         if (!checkNullInputs(Uname, pswd)) {
             try {

@@ -122,7 +122,7 @@ public class Parent_login extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Database_work dbBrain = new Database_work();
+        Database_Brain dbBrain = new Database_Brain();
         Connection con;
 
         String username = tUsername.getText();

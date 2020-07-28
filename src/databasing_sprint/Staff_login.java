@@ -1,6 +1,5 @@
 package databasing_sprint;
 
-import static databasing_sprint.Database_work.DB_url;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -102,7 +101,7 @@ public class Staff_login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Database_work dbBrain = new Database_work();
+        Database_Brain dbBrain = new Database_Brain();
         Connection con;
 
         String username = tUsername.getText();

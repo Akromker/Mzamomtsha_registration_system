@@ -133,7 +133,7 @@ public class Register_page extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Database_work dbBrain = new Database_work();
+        Database_Brain dbBrain = new Database_Brain();
         String qry, name, surname, Uname, Pswd, contactNum,
                 address, IDdoc;
 

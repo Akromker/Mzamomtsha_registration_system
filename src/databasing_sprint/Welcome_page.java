@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  */
 public class Welcome_page extends javax.swing.JFrame {
 
-    public Database_work dbWork = new Database_work();
+    public Database_Brain dbWork = new Database_Brain();
 
     public Welcome_page() {
         initComponents();
